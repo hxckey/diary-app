@@ -3,6 +3,7 @@ const { ObjectId } = require('mongodb')
 
 class Entry {
     constructor(data){
+        this.id = data.id
         this.name = data.name
         this.title = data.title
         this.entry = data.entry
@@ -13,7 +14,8 @@ class Entry {
             try {
                 const db = await init()
                 const entryData = await db.collection('diaries').find().toArray()
-                const entries = entryData.map(d => new Entry({ ...d }))
+                // console.log(entryData.length)
+                const entries = entryData.map(d => new Entry({ ...d, id: d._id }))
                 resolve(entries);
             } catch (err) {
                 console.log(err);

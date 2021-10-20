@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Speedrun = require('../models/diary')
+const Entry = require('../models/diary')
 
 // entries index route 
 router.get('/', async (req, res) => {
@@ -12,3 +12,5 @@ router.get('/', async (req, res) => {
         escape.status(500).json({err})
     }
 })
+
+module.exports = router;
