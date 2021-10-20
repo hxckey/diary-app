@@ -7,7 +7,7 @@ services:
       - 3000:3000
     environment:
       - DB_NAME=diaries
-      - DB_CONNECTION=mongodb://georgeandgolnar:diary_db@db:27017
+      - DB_CONNECTION=mongodb://georgeandgolnar:keepout@db:27017
     depends_on:
       - db
     volumes:
