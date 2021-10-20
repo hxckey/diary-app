@@ -6,7 +6,18 @@ const entiesList = document.querySelector('table');
 
 form.addEventListener('submit',submitDiary);
 
+// Fetch all entries as soon as app is loaded
+getAllEntries();
 
+// ********************************************
+
+// Entires FLOW
+function getAllEntries(){
+    fetch('http://localhost:3000/entries')
+        .then(r => r.json())
+        .then(appendEntries)
+        .catch(console.warn)
+};
 
 function submitDiary(e){
     e.preventDefault();
