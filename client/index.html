@@ -5,30 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Diary</title>
 </head>
-<body>
+<body class="container">
 
     <h1>Share your funny diaries here</h1>
 
-    <form action="" id="form">
+    <form action="" id="form" >
         <label for="title">Title</label>
-        <input type="text" id="title">
+        <input required type="text" id="title">
         <br>
         <label for="name">Name</label>
-        <input type="text" id="name">
+        <input required type="text" id="name">
         <br>
         <label for="entry">Entry</label>
         <br>
-        <textarea name="entry" id="entry" cols="30" rows="5"></textarea>
+        <textarea required class="form-control" name="entry" id="entry" cols="30" rows="5"></textarea>
         <br>
-        <input type="submit">
+        <input type="submit" id="submit">
     </form>
 
-    <section id=dogs>
-        <h2>Doggos</h2>
-        <table>
+    <section id=dogs class="container">
+        <h2>Recent Entries</h2>
+        <table class="table table-bordered">
             <tr>
                 <th>Name</th>
                 <th>Title</th>

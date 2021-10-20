@@ -15,7 +15,6 @@ body{
 form{
     color: var(--text);
     font-weight: 800;
-
 }
 
 h2, h1{
@@ -25,10 +24,22 @@ h2, h1{
 input{
     display: block;
     background-color: var(--lilac);
+    width: 500px;
 }
 
 textarea{
     background-color: var(--lilac);
+}
+
+#entry{
+    background-color: var(--lilac);
+    width: 800px;
+}
+
+input, #entry{
+    border-color: var(--darkpink);
+    border-radius: 50px;
+    border-width: 5px;
 }
 
 table{
@@ -43,4 +54,9 @@ th{
 
 td{
     color: purple;
+}
+
+#submit:hover{
+    background-color: var(--darkpink);
+    border-color: var(--lilac);
 }

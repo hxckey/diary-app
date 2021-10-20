@@ -27,20 +27,18 @@ function submitDiary(e){
         title:e.target.title.value,
         entry:e.target.entry.value
     }
-    
     const options = { 
         method: 'POST',
         body: JSON.stringify(diaryData),
         headers: { "Content-Type": "application/json" }
     };
 
-    fetch('http://localhost:3000/entries', options)
+   
+        fetch('http://localhost:3000/entries', options)
         .then(r => r.json())
         .then(appendEntry)
         .then(() => e.target.reset())
         .catch(console.warn)
-
-    console.log(diaryData);
 
 };
 
