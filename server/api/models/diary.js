@@ -28,7 +28,7 @@ class Entry {
         return new Promise (async (resolve, reject) => {
             try {
                 const db = await init();
-                let entryData = await db.collection('diaries').insertOne({ name, title,entry })
+                let entryData = await db.collection('diaries').insertOne({ name, title, entry })
                 console.log(entryData);
                 let newEntry = new Entry(entryData.ops[0]);
                 resolve (newEntry);
