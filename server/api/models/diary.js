@@ -24,6 +24,20 @@ class Entry {
         })
     }
 
+    static create(name, title ,entry){
+        return new Promise (async (resolve, reject) => {
+            try {
+                const db = await init();
+                let entryData = await db.collection('diaries').insertOne({ name, title,entry })
+                console.log(entryData);
+                let newEntry = new Entry(entryData.ops[0]);
+                resolve (newEntry);
+            } catch (err) {
+                reject('Error creating entry');
+            }
+        });
+    }
+
 }
 
 module.exports = Entry;
