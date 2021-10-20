@@ -1,8 +1,46 @@
-h2{
-    color:cadetblue ;
+:root{
+    /* include colorscheme  */
+    --mint: #CAF7E3;
+    --palepink: #F8EDED;
+    --lilac: #F6DFEB;
+    --darkpink: #E4BAD4;
+    --text: #56077e;
+}
+
+body{
+    background-color: var(--mint);
+    font-family: 'Courier New', Courier, monospace
+}
+
+form{
+    color: var(--text);
+    font-weight: 800;
+
+}
+
+h2, h1{
+    color:var(--text) ;
 }
 
 input{
     display: block;
+    background-color: var(--lilac);
 }
 
+textarea{
+    background-color: var(--lilac);
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin-left: 0;
+}
+
+th{
+    color: var(--text);
+}
+
+td{
+    color: purple;
+}
