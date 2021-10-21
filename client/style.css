@@ -61,14 +61,8 @@ td{
     border-color: var(--lilac);
 }
 
-/* tr{
-    width: 400px;
-    overflow: scroll;
-} */
-
 .entry{
     max-width: 600px;
     overflow: scroll;
-    height: fit-content;
     word-wrap: break-word;
 }
