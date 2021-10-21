@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// const db = connect("mongodb://localhost:27017/diaries")
 const Entry = require('../models/diary')
 
 // entries index route 

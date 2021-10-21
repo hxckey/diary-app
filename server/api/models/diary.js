@@ -14,7 +14,6 @@ class Entry {
             try {
                 const db = await init()
                 const entryData = await db.collection('diaries').find().toArray()
-                // console.log(entryData.length)
                 const entries = entryData.map(d => new Entry({ ...d, id: d._id }))
                 resolve(entries);
             } catch (err) {
