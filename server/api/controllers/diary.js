@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         const entries = await Entry.all
         res.json({entries})
     } catch(err) {
-        escape.status(500).json({err})
+        res.status(500).json({err})
     }
 })
 
@@ -17,11 +17,9 @@ router.post('/', async (req, res) => {
     try {
         console.log(`hiiii ${req.body.name}`);
         const entry = await Entry.create(req.body.name, req.body.title,  req.body.entry);
-        // tried using line 21 to store new entry in db permanently 
-        // db.diaries.insertOne({name: req.body.name, title: req.body.title, entry: req.body.entry })
         res.json(entry)
     } catch(err) {
-        escape.status(500).json({err})
+        res.status(500).json({err})
     }
 })
 

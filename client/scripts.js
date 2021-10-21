@@ -2,7 +2,7 @@ const nameInput=document.getElementById("name");
 const titleInput=document.getElementById("title");
 const entryInput=document.getElementById("entry");
 const form=document.querySelector("form");
-const entiesList = document.querySelector('table');
+const entriesList = document.querySelector('table');
 
 form.addEventListener('submit',submitDiary);
 
@@ -50,14 +50,19 @@ function appendEntries(data){
 function appendEntry(diaryData){
     const newRow = document.createElement('tr');
     const entryLi = formatEntryTr(diaryData, newRow)
-    entiesList.append(entryLi);
+    entriesList.append(entryLi);
 };
 
 function formatEntryTr(entry, tr){
+
     const nameTd = document.createElement('td');
     const titleTd = document.createElement('td');
     const entryTd = document.createElement('td');
 
+    entryTd.className="entry";
+
+    // entryTd.style.width = "800px";
+    // entryTd.style.overflow="scroll";
 
     nameTd.textContent = entry.name;
     titleTd.textContent = entry.title;
