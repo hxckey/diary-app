@@ -27,3 +27,8 @@ challenges:
 - styling of the web page, not the most sleek and stylish
 - initial problems with the file paths in docker compose
 - heroku deployment (not necessary but raised problems)
+
+# future features:
+- add multiple html docs for navigation and smooth user experience
+- netlify deploy
+- client pages run on own server within docker-compose 
