@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/logos/logo_small_icon_only.png">
+    <title>Diary</title>
+</head>
+<body class="container">
+
+    <h1>Share your funny diaries here</h1>
+
+    <form action="" id="form" >
+        <label for="title">Title</label>
+        <input required type="text" id="title">
+        <br>
+        <label for="name">Name</label>
+        <input required type="text" id="name">
+        <br>
+        <label for="entry">Entry</label>
+        <br>
+        <textarea required class="form-control" name="entry" id="entry" cols="30" rows="5" wrap="hard"></textarea>
+        <br>
+        <input type="submit" id="submit">
+    </form>
+
+    <section id=dogs class="container">
+        <h2>Recent Entries</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Entry</th>
+            </tr>
+
+            <ul>
+
+            </ul>
+        </table>
+    </section>
+    
+</body>
+</html>

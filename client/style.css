@@ -1,0 +1,68 @@
+:root{
+    /* include colorscheme  */
+    --mint: #CAF7E3;
+    --palepink: #F8EDED;
+    --lilac: #F6DFEB;
+    --darkpink: #E4BAD4;
+    --text: #56077e;
+}
+
+body{
+    background-color: var(--mint);
+    font-family: 'Courier New', Courier, monospace
+}
+
+form{
+    color: var(--text);
+    font-weight: 800;
+}
+
+h2, h1{
+    color:var(--text) ;
+}
+
+input{
+    display: block;
+    background-color: var(--lilac);
+    width: 500px;
+}
+
+textarea{
+    background-color: var(--lilac);
+}
+
+#entry{
+    background-color: var(--lilac);
+    width: 800px;
+}
+
+input, #entry{
+    border-color: var(--darkpink);
+    border-radius: 50px;
+    border-width: 5px;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin-left: 0;
+}
+
+th{
+    color: var(--text);
+}
+
+td{
+    color: purple;
+}
+
+#submit:hover{
+    background-color: var(--darkpink);
+    border-color: var(--lilac);
+}
+
+.entry{
+    max-width: 600px;
+    overflow: scroll;
+    word-wrap: break-word;
+}
